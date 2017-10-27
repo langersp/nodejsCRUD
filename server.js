@@ -87,7 +87,7 @@ app.delete('/api/cars/:id', (req, res, next) => {
 //mongodb://langersp:****@ds159344.mlab.com:59344/candyspace-cars
 // connect to mongo db stored on Mongo Labs mlab.com
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/cars', { useMongoClient: true }, (err, dbConnection) => {
+mongoose.connect('mongodb://langersp:Gunners1!@ds159344.mlab.com:59344/candyspace-cars', { useMongoClient: true }, (err, dbConnection) => {
     if (err) return console.log(err);
 
     db = dbConnection;
