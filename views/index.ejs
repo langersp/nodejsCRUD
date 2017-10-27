@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CandySpace Cars</title>
+  <link href="/public/style.css" type="text/css" rel="stylesheet" />
+</head>
+	<body>
+	 
+		<h1>CandySpace Cars by Paul Langley</h1>
+
+		<table class="cars" id="carsTable">
+		  <thead>
+			  <tr class="cars__headers">
+			  		<th>Manufacturer</th>
+			  		<th>Model</th>
+			  		<th>Price</th>
+			  		<th>Acceleration</th>
+			  		<th>Top Speed</th>
+			  		<th>Sold</th>
+			  		<th>Created At</th>
+			  		<th></th>
+			  </tr>
+		  </thead>
+		  <tbody>
+		    <% for(var i=0; i<cars.length; i++) {%>
+		    <tr class="cars__data">
+		    	<td><span><%= cars[i].manufacturer %></span></td>
+		        <td><span><%= cars[i].model %></span></td>
+		        <td><span><%= cars[i].price.value %></span></td>
+		        <td><span><%= cars[i].acceleration.value %></span></td>
+		        <td><span><%= cars[i].topSpeed %></span></td>
+		        <td class="cars__isSold"><span><%= cars[i].isSold %></span></td>
+		        <td><span><%= cars[i].createdAt %></span></td>
+		        <td>
+				<% if(cars[i].isSold===false){ %><button id="btnCar" class="car__button" data-id=<%= cars[i]._id %>>SOLD</button><% } %></td>
+		    </tr>
+		    <% } %>
+		  </tbody>
+		</table>
+	     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	     <script src="/public/main.js"></script>
+	</body>
+</html>

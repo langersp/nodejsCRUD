@@ -1,0 +1,14 @@
+.cars {
+    border: 1px solid #ccc;
+    padding: 0px;
+}
+
+.cars td, .cars th {
+    padding: 10px;
+}
+
+.cars th {
+    background-color: #000;
+    font-size: 16px;
+    color: #fff;
+}
